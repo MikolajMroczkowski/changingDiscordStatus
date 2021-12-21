@@ -1,0 +1,39 @@
+{
+  "messages": [
+    {
+      "emoji": "\uD83D\uDD34",
+      "message": "Hej",
+      "time": 4000
+    },
+    {
+      "emoji": "\uD83D\uDD35",
+      "message": "Skrypt napisany w node js",
+      "time": 2000
+    },
+    {
+      "emoji": "\uD83D\uDFE1",
+      "message": "Trochę nieoficjalny xD",
+      "time": 1300
+    },
+    {
+      "emoji": "\uD83D\uDFE2",
+      "message": "Zapraszam na mojego github'a, link na profilu",
+      "time": 2000
+    },
+    {
+      "emoji": "\uD83D\uDFE0",
+      "message": "Tam jest ten skrypt",
+      "time": 1750
+    },
+    {
+      "emoji": "\uD83D\uDFE3",
+      "message": "Polecam TechniSchools",
+      "time": 4000
+    },
+    {
+      "emoji": "⚪",
+      "message": "Tak nudzi mi się",
+      "time": 2000
+    }
+  ]
+}
