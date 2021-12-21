@@ -16,6 +16,11 @@
       "time": 1300
     },
     {
+      "emoji": "⚪",
+      "message": "Skrypt odczytuje statusy z pliku json",
+      "time": 2000
+    },
+    {
       "emoji": "\uD83D\uDFE2",
       "message": "Zapraszam na mojego github'a, link na profilu",
       "time": 2000
@@ -29,11 +34,6 @@
       "emoji": "\uD83D\uDFE3",
       "message": "Polecam TechniSchools",
       "time": 4000
-    },
-    {
-      "emoji": "⚪",
-      "message": "Tak nudzi mi się",
-      "time": 2000
     }
   ]
 }

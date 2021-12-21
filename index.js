@@ -5,7 +5,7 @@ const {window} = new JSDOM();
 const {document} = (new JSDOM('')).window;
 global.document = document;
 var $ = jQuery = require('jquery')(window);
-let jsonData = require('./messages.json');
+let statusJson = require('./messages.json');
 
 
 function status(emoji, text) {
@@ -19,20 +19,17 @@ function status(emoji, text) {
         "data": '{"custom_status":{"text":"' + text + '","emoji_name":"' + emoji + '"}}'
     });
 }
-function init(){
-    console.log(jsonData)
-    let messages = jsonData
-    run(messages,0)
-}
-function run(messages,index){
-    if(index >= messages.length){
-        init()
+function run(index){
+    if(index >= statusJson.messages.length){
+        run(0)
         return
     }
-    status(messages.messages[index].emoji,messages.messages[index].message)
+    console.log("Changed to:",statusJson.messages[index],index+1,"of",statusJson.messages.length)
+    status(statusJson.messages[index].emoji,statusJson.messages[index].message)
     setTimeout(function () {
-        run(messages,index+1)
-    },messages.messages[index].time)
+        run(index+1)
+    },statusJson.messages[index].time)
     return
 }
-init()
+console.log("Loaded",statusJson.messages.length,"status")
+run(0)
