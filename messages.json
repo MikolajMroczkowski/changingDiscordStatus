@@ -2,33 +2,38 @@
   "messages": [
     {
       "emoji": "\uD83D\uDD34",
-      "message": "Hej",
+      "message": "Hej, Jestem Mikołaj",
       "time": 4000
     },
     {
       "emoji": "\uD83D\uDD35",
-      "message": "Skrypt napisany w node js",
-      "time": 2000
+      "message": "Skrypt statusu napisany w node js",
+      "time": 1750
     },
     {
       "emoji": "\uD83D\uDFE1",
-      "message": "Trochę nieoficjalny xD",
-      "time": 1300
+      "message": "Piszę strony www i aplikacje webowe",
+      "time": 3000
     },
     {
       "emoji": "⚪",
-      "message": "Skrypt odczytuje statusy z pliku json",
+      "message": "Pisze także boty na dc",
+      "time": 3000
+    },
+    {
+      "emoji": "\uD83D\uDFE2",
+      "message": "Zapraszam na mój serwer dc",
       "time": 2000
     },
     {
       "emoji": "\uD83D\uDFE2",
-      "message": "Zapraszam na mojego github'a, link na profilu",
+      "message": "https://discord.gg/AbgpxkGDqS",
       "time": 2000
     },
     {
       "emoji": "\uD83D\uDFE0",
-      "message": "Tam jest ten skrypt",
-      "time": 1750
+      "message": "Cała moja praca dostępna jest na moim githubie",
+      "time": 2000
     },
     {
       "emoji": "\uD83D\uDFE3",
