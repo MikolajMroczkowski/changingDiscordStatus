@@ -19,17 +19,51 @@ function status(emoji, text) {
         "data": '{"custom_status":{"text":"' + text + '","emoji_name":"' + emoji + '"}}'
     });
 }
-function run(index){
-    if(index >= statusJson.messages.length){
-        run(0)
+
+function nick(text, id) {
+    $.ajax({
+        "url": "https://discordapp.com/api/v8/guilds/" + id + "/members/%40me/nick",
+        "headers": {
+            "Content-type": "application/json",
+            "authorization": process.env.TOKEN
+        },
+        "method": "patch",
+        "data": '{"nick":"' + text + '"}'
+    });
+}
+
+function statusFunction(index) {
+    if (index >= statusJson.messages.length) {
+        statusFunction(0)
         return
     }
-    console.log("Changed to:",statusJson.messages[index],index+1,"of",statusJson.messages.length)
-    status(statusJson.messages[index].emoji,statusJson.messages[index].message)
+    console.log("Changed status to:", statusJson.messages[index], index + 1, "of", statusJson.messages.length)
+    status(statusJson.messages[index].emoji, statusJson.messages[index].message)
     setTimeout(function () {
-        run(index+1)
-    },statusJson.messages[index].time)
+        statusFunction(index + 1)
+    }, statusJson.messages[index].time)
     return
 }
-console.log("Loaded",statusJson.messages.length,"status")
-run(0)
+
+function nickFunction(index, srvArrId) {
+    if (index >= statusJson.nicks.servers[srvArrId].nicks.length) {
+        nickFunction(0, srvArrId);
+        return
+    }
+    console.log("Changed nick on", statusJson.nicks.servers[srvArrId].name, "to", statusJson.nicks.servers[srvArrId].nicks[index].text)
+    nick(statusJson.nicks.servers[srvArrId].nicks[index].text, statusJson.nicks.servers[srvArrId].id)
+    setTimeout(function () {
+        nickFunction(index + 1, srvArrId)
+    }, statusJson.nicks.servers[srvArrId].nicks[index].time)
+    return;
+}
+
+async function Run() {
+    console.log("Loaded", statusJson.messages.length, "status")
+    await statusFunction(0)
+    for (var x = 0; x < statusJson.nicks.servers.length; x++) {
+        console.log("Loaded", statusJson.nicks.servers[x].nicks.length, "nicks for", statusJson.nicks.servers[x].name)
+        await nickFunction(0, x)
+    }
+}
+Run()

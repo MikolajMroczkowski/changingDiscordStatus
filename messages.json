@@ -1,8 +1,28 @@
 {
+  "nicks": {
+    "servers": [{
+      "id": "808848798737891329",
+      "name": "Somsiady",
+      "nicks": [
+        {
+          "text": "ROOT",
+          "time": 3000
+        },
+        {
+          "text": "Lokalny Egzorcysta",
+          "time": 3000
+        },
+        {
+          "text": "Kurowa",
+          "time": 3000
+        }
+      ]
+    }]
+  },
   "messages": [
     {
       "emoji": "\uD83D\uDD34",
-      "message": "Hej, Jestem Mikołaj",
+      "message": "Hej, Moim hobby jest programowanie",
       "time": 4000
     },
     {
@@ -12,13 +32,18 @@
     },
     {
       "emoji": "\uD83D\uDFE1",
-      "message": "Piszę strony www i aplikacje webowe",
+      "message": "Piszę strony www i aplikacje web'owe",
       "time": 3000
     },
     {
       "emoji": "⚪",
-      "message": "Pisze także boty na dc",
+      "message": "Pisze boty na dc",
       "time": 3000
+    },
+    {
+      "emoji": "\uD83D\uDFE0",
+      "message": "Cała moja praca dostępna jest na moim githubie",
+      "time": 2000
     },
     {
       "emoji": "\uD83D\uDFE2",
@@ -31,14 +56,9 @@
       "time": 2000
     },
     {
-      "emoji": "\uD83D\uDFE0",
-      "message": "Cała moja praca dostępna jest na moim githubie",
-      "time": 2000
-    },
-    {
       "emoji": "\uD83D\uDFE3",
-      "message": "Polecam TechniSchools",
-      "time": 4000
+      "message": "Free odrabiamy pl",
+      "time": 2000
     }
   ]
 }
